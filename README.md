@@ -24,3 +24,4 @@
   8. GitHub and Stack Overflow API
   
 ## Screenshots
+   - Please check the screenshots folder in this repository.
