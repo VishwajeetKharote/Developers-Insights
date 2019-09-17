@@ -1,0 +1,149 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {background: #0e0e0e;font-size: 18px;color: #fff;font-family: "Lato",Helvetica;}
+
+#top-bar {height:60px;line-height: 60px;padding: 0 40px;margin-top: 20px;z-index: 10;position: relative;}
+#top-bar nav {float: right;margin-right:10px;margin-top: -5px;}
+#top-bar nav li {display: inline-block;margin-left: 15px; vertical-align:top; }
+#top-bar nav li a {color: #fff;font-weight: 700;font-size: 14px;text-decoration:none;text-transform: uppercase;}
+
+#logo {color: #fff;font-weight: 700;font-family: "Satisfy";text-decoration: none;font-size: 26px;float: left;}
+#logo span {color: #04a7b4;}
+
+.graph-view {width: 0%;float: left;min-height: 1px;position:relative;height: 100%;z-index: 10;transition: width 0.8s ease;overflow: hidden;}
+.graph-content {height: calc(100vh - 120px);position: relative;z-index: 4;}
+
+.menu-view {
+	width: 50%;
+	position: absolute;
+	min-height: 1px;
+	height: 100%;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	transition: width 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.menu-view nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.menu-view nav li {padding: 20px 0; transition: all 0.8s cubic-bezier(0.2,1,0.3,1);}
+.menu-view nav li a {color: #fff;text-decoration: none;font-family: "Satisfy";font-size: 32px;position:relative;display: inline-block;}
+.menu-view nav li a:after {content:' ';height: 4px;width: 50%;background:#fff;display:block;position:absolute;bottom: -7px;left: 0;transform: rotate(-3deg);transition: all 0.8s cubic-bezier(0.2,1,0.3,1);}
+
+.menu-view nav li a.disabled span {text-decoration: line-through;}
+
+.menu-view nav li.active a { color:#50cad4; }
+.menu-view nav li.active a:after, .menu-view nav li a:hover:after {width: 100%;height: 4px;bottom:-6px;transform: rotate(-1deg);}
+.expand-graph .menu-view nav li:not(.active) a {opacity:0.2;}
+
+.menu-view nav li:nth-child(1) a:after{background: linear-gradient(45deg, #0562d1, #8667ff);}
+.menu-view nav li:nth-child(2) a:after{     background:linear-gradient(45deg, #0947db, #07d89d); }
+.menu-view nav li:nth-child(3) a:after{background: linear-gradient(45deg, #0562d0, #9097ec);}
+.menu-view nav li:nth-child(4) a:after{     background: linear-gradient(45deg, #3a3d98, #6f22b9); }
+
+footer {height: 40px;text-align: center;font-size: 14px;color: #6a6a79;}
+
+.content--canvas {  position:relative; z-index:1; transition:opacity 1s ease ; }
+.container { width:800px; margin:0 auto; }
+
+form { margin-bottom:50px }
+h1.title,
+form legend {font-family: "Satisfy";font-size: 32px;margin-bottom: 50px;}
+form label {font-weight: 400;font-size: 14px;display: block;margin-bottom: 5px;}
+form fieldset {margin-bottom: 25px;}
+form input {border: 2px solid #333;background: #333;padding: 0px 10px;height: 44px;box-sizing: border-box;border-radius: 2px;color: #fff;width: calc(100% - 20px);font-size: 15px;}
+form input[type=submit] {width: 150px;background: #1e8dce;border-radius: 3px;}
+form input:focus { border:none; box-shadow:none; outline:none; }
+form input.listener:required {border-color: blue;}
+form input.listener:invalid {border-color: red;}
+
+
+form select {border: 2px solid #333;background: #333;padding: 0px 10px;height: 44px;box-sizing: border-box;border-radius: 2px;color: #fff;width: calc(100% - 20px);font-size: 15px;}
+
+/**
+ * On Menu click
+ **/
+
+ .expand-graph .menu-view { width:410px; }
+ .expand-graph .content--canvas { }
+.expand-graph .graph-view { width:calc(100% - 410px) }
+
+.row {margin-bottom: 25px;clear: both;}
+.row.col-2 > div {display: inline-block;width:calc(50% - 20px);vertical-align: top;position: relative;}
+.row.col-1 > div {display: inline-block;width: calc(100% - 35px); position:relative; }
+
+.row.col-1 > div span,
+.row.col-2 > div span {position:absolute;bottom: -11px;left: 0;font-size: 11px;background: #ff0000;padding: 4px 10px;border-radius: 2px;box-shadow: 0px 0px 17px rgba(0,0,0,0.5); display: none; }
+
+.graph-view ul { padding:40px; overflow:auto; height:calc(100% - 40px); margin-right:30px;  }
+.graph-view ul li { margin-bottom:5px }
+.graph-view ul li strong { width:200px; float:left; }
+
+.graph-toggle { padding:10px 25px; display:inline-block; background:#fff; color:#111; text-decoration:none; font-size:12px; margin-bottom:20px; }
+
+.graph-view h3 { padding:20px 40px; opacity:0;  transition:0.5s opacity ease 3s;  }
+.graph-view span { display:block; padding:20px 40px; opacity:0;  text-align: center; transition:0.5s opacity ease 1s;  }
+ .expand-graph .graph-view h3 {  opacity:1; }
+ .expand-graph .graph-view span {  opacity:1; }
+
+ #canvasGenerator  { width:100%; height:calc(100vh - 160px); }
+
+.has-error input { border:2px solid #ff0000; box-shadow:0px 0px 10px #ff0000; }
+
+.loading-screen {position: absolute;top:0;left:0;width:100%;height:100%;z-index:99;display:flex;align-content: center;justify-content: center;background: #111111;}
+.loading-screen svg { transform:translateY(-50%); position:absolute; top:50%; }
+
+.loader {position: absolute;top:0;left:0;width:100%;height:100%;z-index:99;display:flex;align-content: center;justify-content: center; }
+.loader svg { transform:translateY(-50%); position:absolute; top:50%; }
+
+.proxy-screen { display:none; width:100%; height:600px; }

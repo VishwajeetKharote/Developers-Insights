@@ -1,0 +1,81 @@
+{
+        
+    "data":
+        [{
+            "year":2015,
+            "Java": 13688,
+            "Python":7707,
+            "C":3710,
+            "Javascript":12489,
+            "Go":343,
+            "Ruby":2336,
+            "R":1714,
+            "Swift":964,
+            "Kotlin":36,
+            "PHP":3280,
+            "Typescript":130,
+            "HTML":8904
+        },
+        {   "year":2016,
+            "Java": 19507,
+            "Python":10841,
+            "C":4660,
+            "Javascript":16204,
+            "Go":436,
+            "Ruby":2251,
+            "R":2464,
+            "Swift":1328,
+            "Kotlin":131,
+            "PHP":4661,
+            "Typescript":556,
+            "HTML":14506
+        },
+        {
+            "year":2017,
+            "Java": 25739,
+            "Python":17956,
+            "C":6229,
+            "Javascript":21845,
+            "Go":861,
+            "Ruby":2204,
+            "R":2634,
+            "Swift":1911,
+            "Kotlin":494,
+            "PHP":5685,
+            "Typescript":1781,
+            "HTML":20070
+        },
+        {
+            "year":2018,
+            "Java": 29987,
+            "Python":24916,
+            "C":6979,
+            "Javascript":33189,
+            "Go":2051,
+            "Ruby":2471,
+            "R":3493,
+            "Swift":1957,
+            "Kotlin":1202,
+            "PHP":5421,
+            "Typescript":3300,
+            "HTML":25756
+        },
+        {
+            "year":2019,
+            "Java": 10428,
+            "Python":8321,
+            "C":2053,
+            "Javascript":10255,
+            "Go":375,
+            "Ruby":604,
+            "R":1114,
+            "Swift":820,
+            "Kotlin":376,
+            "PHP":1682,
+            "Typescript":1239,
+            "HTML":9668
+        }
+    ]
+    
+
+}

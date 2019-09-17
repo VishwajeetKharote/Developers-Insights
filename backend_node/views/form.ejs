@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Github Insights</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://fonts.googleapis.com/css?family=Lato|Satisfy" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/style.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+   <div class="graph-wrapper">
+
+      <!--  Start of top section   -->
+      <section id="top-bar">
+         <h1><a href="/"><img src="/images/logo.png" /></a></h1>
+         <nav>
+            <ul>
+               <li><a href="/form">JS validation Form</a></li>
+               <li><a href="/canvas">Canvas</a></li>
+               <li><a href="/register">HTML5 validation Register</a></li>
+            </ul>
+         </nav>
+      </section>
+      <!-- End of top section -->
+
+      <section class="container">
+
+         <form id="d-register-form" action="/register" method="POST">
+
+            <fieldset>
+               <legend>JS Validation Form</legend>
+
+               <div class="row col-2">
+
+                  <div>
+                     <label for="fname">First Name </label>
+                     <input type="text" placeholder="Will" name="fname">
+                     <span class='error-label'>First Name cannot be empty !</span>
+                  </div>
+
+                  <div>
+                     <label for="lname">Last Name </label>
+                     <input type="text" placeholder="Smith" name="lname">
+                     <span class='error-label'>Last Name cannot be empty !</span>
+                  </div>
+
+               </div>
+
+
+               <div class="row col-2">
+                  <div>
+                     <label for="phone">Phone Number (format: xxx-xxx-xxxx) </label>
+                     <input type="tel" placeholder="xxx-xxx-xxxx" name="phone">
+                     <span class='error-label'>Invalid format for phone number</span>
+                  </div>
+                  <div>
+                     <label for="email">Email </label>
+                     <input type="email" placeholder="spartans@sjsu.edu" name="email">
+                     <span class='error-label'>Invalid email</span>
+                  </div>
+               </div>
+
+
+               <div class="row col-2">
+
+                  <div>
+                     <label for="psw">Password(min 4 char) </label>
+                     <input type="password" minlength="4" placeholder="Enter Password" name="psw">
+                     <span class='error-label'>Password cannot be empty !</span>
+                  </div>
+
+                  <div>
+                     <label for="confirm_psw">Confirm Password(min 4 char) </label>
+                     <input type="password" minlength="4" placeholder="Confirm Password" name="confirm_psw">
+                     <span class='error-label'>Password do not match</span>
+                  </div>
+               </div>
+
+               <div class="row col-1">
+                  <div>
+                     <label for="address1">Street Address 1 </label>
+                     <input type="text" placeholder="Enter address" name="address1">
+                     <span class='error-label'>Address cannot be empty</span>
+                  </div>
+
+               </div>
+
+               <div class="row col-2">
+
+                  <div>
+                     <label for="zip">Zip Code </label>
+                     <input type="number" placeholder="Enter Zip Code" name="zip">
+                     <span class='error-label'>Invalid zipcode</span>
+                  </div>
+
+                  <div>
+                     <label for="state">State </label>
+                     <input id="state" type="text" placeholder="California" name="state">
+                     <span class='error-label'>State cannot be empty !</span>
+                  </div>
+               </div>
+
+               <div class="row col-1">
+                  <div>
+                     <label for="country">Country </label>
+                     <select id="country" name="country">
+                        <option value="United States of America" selected>United States of America</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Canada">Canada</option>
+                        <option value="China">China</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="France">France</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Germany">Germany</option>
+                        <option value="India">India</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Korea">Korea</option>
+                        <option value="New Zealand">New Zewland</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Russia">Russia</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Spain">Spain</option>
+                        <option value="The United Kingdom">The United Kingdom</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                     </select>
+                  </div>
+               </div>
+
+            </fieldset>
+
+            <div>
+               <input type="submit" value="Register">
+            </div>
+
+         </form>
+
+      </section>
+
+      <footer>
+         <p>&copy; 2019 Falcons. All rights reserved. </p>
+      </footer>
+
+   </div>
+
+
+
+   <script src="/javascripts/main.js"></script>
+</body>
+
+</html>

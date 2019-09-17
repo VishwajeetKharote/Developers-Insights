@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE = edge">
+   <meta name="viewport" content="width = device-width,
+         initial-scale = 1">
+
+   <title>Popular Users | Dashboard</title>
+
+   <!-- Bootstrap -->
+   <!-- HTML5 shim and Respond.js for IE8 support of HTML5
+         elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the
+         page via file:// -->
+
+   <!--[if IE]>
+      <script src="/assets/js/html5.js"></script>
+   <![endif]-->
+
+   <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+   <link
+      href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300italic,400italic,700,700italic,900,900italic'
+      rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+   <script src="https://d3js.org/d3.v5.min.js"></script>
+   <script src="/javascripts/custom.js"></script>
+
+   <div class="container-fluid">
+
+      <div class=" row main-header">
+
+         <div class='col-4'>
+            <div class="logo-wrapper">
+               <h1><a href="/"><img src="/images/logo.png" /></a></h1>
+            </div>
+         </div>
+
+         <div class='col-8'>
+            <div class="menu-wrapper">
+
+
+               <ul class="nav admin-nav clearfix">
+                  <li class='active'><a href="#">Hi , <%= user.first_name %></a></li>
+                  <li class=""><a href="/logout"><span class="logout-label">Logout</span> <span
+                           class="glyphicon glyphicon-off"></span></a></li>
+               </ul>
+
+
+            </div>
+         </div>
+
+
+
+
+      </div>
+
+
+
+      <div class="row dashboard-panel">
+
+      <div class="col-sm-3">
+
+         <a href="/" class='clearfix'>
+            <img src='/images/1.png' alt=''>
+            <div class="image">
+               <svg viewBox="0 0 24 24" width="24" height="24">
+                  <title>world 2</title>
+                  <g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1" transform="translate(0.5 0.5)"
+                     fill="#000000" stroke="#ffffff">
+                     <path data-cap="butt" data-color="color-2" fill="none" stroke-miterlimit="10"
+                        d="M12,23c3.9-1.9,6-6.1,6-11 s-2.1-9.1-6-11" stroke-linecap="butt"></path>
+                     <path data-cap="butt" data-color="color-2" fill="none" stroke-miterlimit="10"
+                        d="M12,23c-3.9-1.9-6-6.1-6-11 s2.1-9.1,6-11" stroke-linecap="butt"></path>
+                     <polyline data-cap="butt" data-color="color-2" fill="none" stroke-miterlimit="10"
+                        points="12,23 12,22 12,2 12,1 " stroke-linecap="butt"></polyline>
+                     <line data-cap="butt" data-color="color-2" fill="none" stroke-miterlimit="10" x1="1" y1="12" x2="23"
+                        y2="12" stroke-linecap="butt"></line>
+                     <circle fill="none" stroke="#ffffff" stroke-miterlimit="10" cx="12" cy="12" r="11">
+                     </circle>
+                  </g>
+               </svg>
+            </div>
+            <div class="desc">
+               <h4>Users by Area</h4>
+               <p>Click here to view Github users by country.</p>
+            </div>
+         </a>
+
+      </div>
+
+
+
+      <div class="col-sm-3">
+
+         <a href="/popular-users" class='clearfix selected'>
+            <img src='/images/2.png' alt=''>
+            <div class="image">
+               <svg viewBox="0 0 24 24" width="24" height="24">
+                  <title>user meditation</title>
+                  <g fill="#ffffff">
+                     <circle cx="12" cy="3" r="3" fill="#ffffff"></circle>
+                     <path d="M5,17a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z" fill="#ffffff"></path>
+                     <rect data-color="color-2" y="21" width="24" height="2"></rect>
+                     <path
+                        d="M9,10.174V16h6V10.174l1.849,1.585a1,1,0,0,0,1.276.022l3.281-2.625-1.25-1.562L17.522,9.7l-2.59-2.22A2,2,0,0,0,13.63,7H10.37a2,2,0,0,0-1.3.482L6.478,9.7,3.844,7.594,2.594,9.156l3.281,2.625a1,1,0,0,0,1.276-.022Z"
+                        fill="#ffffff"></path>
+                  </g>
+               </svg>
+            </div>
+            <div class="desc">
+               <h4>Popular Users</h4>
+               <p>Click here to view the users with most followers.</p>
+            </div>
+         </a>
+
+      </div>
+
+      <div class="col-sm-3">
+
+         <a href="/popular-projects" class='clearfix '>
+            <img src='/images/3.png' alt=''>
+            <div class="image">
+               <svg viewBox="0 0 24 24" width="24" height="24">
+                  <title>trend up</title>
+                  <g fill="#ffffff">
+                     <path fill="#ffffff"
+                        d="M23,6H13l4.503,4.503l-4.541,5.045l-5.255-5.255c-0.391-0.391-1.023-0.391-1.414,0l-5,5 c-0.391,0.391-0.391,1.023,0,1.414s1.023,0.391,1.414,0L7,12.414l5.293,5.293C12.48,17.895,12.735,18,13,18 c0.286,0,0.555-0.122,0.743-0.331l5.175-5.75L23,16V6z">
+                     </path>
+                  </g>
+               </svg>
+            </div>
+            <div class="desc">
+               <h4>Popular Projects</h4>
+               <p>Click here to view the most popular projects of all time.</p>
+            </div>
+         </a>
+
+      </div>
+
+      <div class="col-sm-3">
+
+         <a href="/top-languages" class='clearfix '>
+            <img src='/images/4.png' alt=''>
+            <div class="image">
+               <svg viewBox="0 0 24 24" width="24" height="24">
+                  <title>code</title>
+                  <g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1" transform="translate(0.5 0.5)"
+                     fill="#ffffff" stroke="#ffffff">
+                     <polyline fill="none" stroke="#ffffff" stroke-miterlimit="10" points="6,8 2,12 6,16 ">
+                     </polyline>
+                     <polyline fill="none" stroke="#ffffff" stroke-miterlimit="10" points="18,8 22,12 18,16 "></polyline>
+                     <line data-color="color-2" fill="none" stroke-miterlimit="10" x1="10" y1="20" x2="14" y2="4"></line>
+                  </g>
+               </svg>
+            </div>
+            <div class="desc">
+               <h4>Top Programming by Year</h4>
+               <p>Click here to view top 10 programming languages.</p>
+            </div>
+         </a>
+
+      </div>
+
+
+
+         <div class='col-12'>
+            <div class='graph-wrapper graph-1'>
+
+               <h1>Chart showing users with the most followers.</h1>
+
+               <div class='legend'>
+                  <h3>Legend</h3>
+                  <ul>
+                     <li> <span></span> <h4>User</h4> </li>
+                  </ul>
+               </div>
+
+               <div id='graph-users'></div>
+
+            </div>
+         </div>
+
+
+
+      </div>
+
+      <div id="footer-wrapper" class="footer">
+         <div class="container">
+            <p class="text-muted credit">© 2019 FALCONS </p>
+            <ul class="footer-nav">
+               <li><a href="#">CMPE 280</a> </li>
+               <li><a href="#">Privacy</a></li>
+            </ul>
+         </div>
+      </div>
+
+   </div>
+</body>
+
+</html>

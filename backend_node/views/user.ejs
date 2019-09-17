@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE = edge">
+   <meta name="viewport" content="width = device-width,
+         initial-scale = 1">
+
+   <title>User - <%= data.login %> Details </title>
+
+   <!-- Bootstrap -->
+   <!-- HTML5 shim and Respond.js for IE8 support of HTML5
+         elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the
+         page via file:// -->
+
+   <!--[if IE]>
+      <script src="/assets/js/html5.js"></script>
+   <![endif]-->
+
+   <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+   <link
+      href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300italic,400italic,700,700italic,900,900italic'
+      rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+   <script src="https://d3js.org/d3.v5.min.js"></script>
+   <script src="/javascripts/custom.js"></script>
+
+   <div class="container-fluid">
+
+      <div class=" row main-header">
+
+         <div class='col-4'>
+            <div class="logo-wrapper">
+               <h1><a href="/"><img src="/images/logo.png" /></a></h1>
+            </div>
+         </div>
+
+         <div class='col-8'>
+            <div class="menu-wrapper">
+
+
+               <ul class="nav admin-nav clearfix">
+                  <li class='active'><a href="#">Hi , <%= user.first_name %></a></li>
+                  <li class=""><a href="/logout"><span class="logout-label">Logout</span> <span
+                           class="glyphicon glyphicon-off"></span></a></li>
+               </ul>
+
+
+            </div>
+         </div>
+
+
+
+
+      </div>
+
+
+
+      <div class="row dashboard-panel">
+
+         <div class='col-12'>
+             <a href='/' class='btn back-to-graph btn-primary'>&larr; Back to graph</a>
+             <br>
+         </div>
+         <div class='col-3'>
+            <div class='user-side-details'>
+
+               <div class='avatar'>
+                  <img src='<%= data.avatar_url %>' alt=''>
+               </div>
+
+               <h2>Github ID - <%= data.login %></h2>
+
+               <ul>
+                  <li class="clearfix"><span>Company :</span><span> <%= data.company %></span></li>
+                  <li class="clearfix"><span>Blog :</span><span> <%= data.blog %></span></li>
+                  <li class="clearfix"><span>Email :</span><span> <%= data.email || "N/A" %></span></li>
+                  <li class="clearfix"><span>Location :</span><span> <%= data.location || "N/A" %></span></li>
+                  <li class="clearfix"><span>Bio :</span><span> <%= data.bio %></span></li>
+                  <li class="clearfix"><span>Repositories :</span><span> <%= data.public_repos %></span></li>
+                  <li class="clearfix"><span>Gist :</span><span> <%= data.public_gists %></span></li>
+                  <li class="clearfix"><span>Followers :</span><span> <%= data.followers %></span></li>
+                  <li class="clearfix"><span>Following :</span><span> <%= data.following %></span></li>
+               </ul>
+
+            </div>
+         </div>
+
+         <div class='col-9'>
+
+            <div class='row'>
+
+               <div class='col-12'>
+                  <div class='graph-wrapper graph-user-repo'>
+
+                     <h2>Chart Showing User Repositories</h2>
+                  <div class='legend'>
+                     <h3>Legend</h3>
+                     <ul>
+                        <li> <span></span>
+                           <h4>Repository</h4>
+                        </li>
+                     </ul>
+                  </div>
+
+                     <div id='user-repo-graph'></div>
+
+                  </div>
+
+               </div>
+
+               <div class='col-6'>
+                  <div class='graph-wrapper graph-1'>
+
+                     <h2>PIE chart showing Repositories / Gist</h2>
+                     <div class='legend'>
+                        <h3>Legend</h3>
+                        <ul></ul>
+                     </div>
+
+                     <div id='pie1' ></div>
+
+                  </div>
+               </div>
+
+               <div class='col-6'>
+                  <div class='graph-wrapper graph-1'>
+
+                     <h2>PIE chart showing Followers / Following</h2>
+                     <div class='legend'>
+                        <h3>Legend</h3>
+                        <ul></ul>
+                     </div>
+                     <div id='pie2'></div>
+
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+
+
+
+      </div>
+
+      <script>
+         let metadata = <%- JSON.stringify(data) %>;
+         let repos = <%- JSON.stringify(repos) %>;
+      </script>
+
+      <div id="footer-wrapper" class="footer">
+         <div class="container">
+            <p class="text-muted credit">© 2019 FALCONS </p>
+            <ul class="footer-nav">
+               <li><a href="#">CMPE 280</a> </li>
+               <li><a href="#">Privacy</a></li>
+            </ul>
+         </div>
+      </div>
+
+   </div>
+</body>
+
+</html>

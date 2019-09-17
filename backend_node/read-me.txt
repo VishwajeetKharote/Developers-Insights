@@ -1,0 +1,12 @@
+Instructions to run the application
+
+Please follow the below steps to run the application.
+
+1.	Download the zip file from canvas and unzip the file.
+2.	Open terminal and Go to the folder unzipped folder.
+3.	Type the below command to install dependencies of the project:
+npm install or sudo npm install
+4.	To start the node application, type the following command:
+npm start
+5.	Open the Google Chrome browser and use the below url to open the application:
+http://localhost:3000

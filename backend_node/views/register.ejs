@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE = edge">
+   <meta name="viewport" content="width = device-width,
+         initial-scale = 1">
+
+   <title>Top Programming Languages by Years | Dashboard</title>
+
+   <!-- Bootstrap -->
+   <!-- HTML5 shim and Respond.js for IE8 support of HTML5
+         elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the
+         page via file:// -->
+
+   <!--[if IE]>
+      <script src="/assets/js/html5.js"></script>
+   <![endif]-->
+
+   <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+   <link
+      href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300italic,400italic,700,700italic,900,900italic'
+      rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
+   <script src="https://d3js.org/d3.v5.min.js"></script>
+   <script src="/javascripts/custom.js"></script>
+
+   <div class="container-fluid">
+
+      <div class=" row main-header">
+
+         <div class='col-4'>
+            <div class="logo-wrapper">
+               <h1><a href="/"><img src="/images/logo.png" /></a></h1>
+            </div>
+         </div>
+
+         <div class='col-8'>
+            <div class="menu-wrapper">
+
+
+
+
+            </div>
+         </div>
+
+
+
+
+      </div>
+
+
+
+      <div class="row dashboard-panel">
+
+
+         <div class='col-12'>
+            <form id="register-form" action="/register" method="POST">
+
+               <fieldset>
+                  <legend>Registration Form(CSS validation)</legend>
+
+                  <div class="form-row col-2">
+
+                     <div>
+                        <label for="fname">First Name *</label>
+                        <input type="text" placeholder="Will" name="fname" required>
+                        <span class='error-label'>First Name cannot be empty !</span>
+                     </div>
+
+                     <div>
+                        <label for="lname">Last Name *</label>
+                        <input type="text" placeholder="Smith" name="lname" required>
+                        <span class='error-label'>Last Name cannot be empty !</span>
+                     </div>
+
+                  </div>
+
+
+                  <div class="form-row col-2">
+                     <div>
+                        <label for="phone">Phone Number (format: xxx-xxx-xxxx) *</label>
+                        <input type="tel" placeholder="xxx-xxx-xxxx" name="phone" required pattern="^\d{3}-\d{3}-\d{4}$">
+                        <span class='error-label'>Invalid format for phone number</span>
+                     </div>
+                     <div>
+                        <label for="email">Email *</label>
+                        <input type="email" placeholder="spartans@sjsu.edu" name="email" required>
+                        <span class='error-label'>Invalid email</span>
+                     </div>
+                  </div>
+
+
+                  <div class="form-row col-2">
+
+                     <div>
+                        <label for="psw">Password *</label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                     </div>
+
+                     <div>
+                        <label for="confirm_psw">Confirm Password *</label>
+                        <input type="password" placeholder="Confirm Password" name="confirm_psw" required>
+                     </div>
+                  </div>
+
+                  <div class="form-row col-1">
+                     <div>
+                        <label for="address1">Street Address 1 *</label>
+                        <input type="text" placeholder="Enter address" name="address1" required>
+                        <span class='error-label'>Address cannot be empty</span>
+                     </div>
+
+                  </div>
+
+                  <div class="form-row col-2">
+
+                     <div>
+                        <label for="zip">Zip Code *</label>
+                        <input type="number" placeholder="Enter Zip Code" name="zip" required>
+                        <span class='error-label'>Invalid zipcode</span>
+                     </div>
+
+                     <div>
+                        <label for="state">State *</label>
+                        <input id="state" type="text" placeholder="California" name="state" required>
+                        <span class='error-label'>State cannot be empty !</span>
+                     </div>
+                  </div>
+
+                  <div class="form-row col-1">
+                     <div>
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                           <option value="United States of America" selected>United States of America</option>
+                           <option value="Argentina">Argentina</option>
+                           <option value="Australia">Australia</option>
+                           <option value="Belgium">Belgium</option>
+                           <option value="Brazil">Brazil</option>
+                           <option value="Canada">Canada</option>
+                           <option value="China">China</option>
+                           <option value="Croatia">Croatia</option>
+                           <option value="Denmark">Denmark</option>
+                           <option value="Egypt">Egypt</option>
+                           <option value="France">France</option>
+                           <option value="Finland">Finland</option>
+                           <option value="Germany">Germany</option>
+                           <option value="India">India</option>
+                           <option value="Iceland">Iceland</option>
+                           <option value="Italy">Italy</option>
+                           <option value="Ireland">Ireland</option>
+                           <option value="Japan">Japan</option>
+                           <option value="Kenya">Kenya</option>
+                           <option value="Korea">Korea</option>
+                           <option value="New Zealand">New Zewland</option>
+                           <option value="Nepal">Nepal</option>
+                           <option value="Oman">Oman</option>
+                           <option value="Poland">Poland</option>
+                           <option value="Paraguay">Paraguay</option>
+                           <option value="Russia">Russia</option>
+                           <option value="Serbia">Serbia</option>
+                           <option value="Singapore">Singapore</option>
+                           <option value="Spain">Spain</option>
+                           <option value="The United Kingdom">The United Kingdom</option>
+                           <option value="Ukraine">Ukraine</option>
+                           <option value="Vietnam">Vietnam</option>
+                           <option value="Zimbabwe">Zimbabwe</option>
+                        </select>
+                     </div>
+                  </div>
+
+               </fieldset>
+
+               <div>
+                  <input type="submit" value="Register">
+               </div>
+
+            </form>
+         </div>
+
+
+
+      </div>
+
+      <div id="footer-wrapper" class="footer">
+         <div class="container">
+            <p class="text-muted credit">© 2019 FALCONS </p>
+            <ul class="footer-nav">
+               <li><a href="#">CMPE 280</a> </li>
+               <li><a href="#">Privacy</a></li>
+            </ul>
+         </div>
+      </div>
+
+   </div>
+</body>
+
+</html>
