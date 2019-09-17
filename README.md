@@ -1,4 +1,4 @@
-### Developers Insights using GitHub API.
+# Developers Insights using GitHub API.
 
 ## Note: This repository has been recently made public. Changes are in progress to implement the dashboard in React.
 
